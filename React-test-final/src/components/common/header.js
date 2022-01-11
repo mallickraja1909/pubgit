@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import logo1 from '../../assets/images/logo.png';
 
 import { Anchor, Drawer, Button } from 'antd';
+// 
+import { PageHeader, Menu } from 'antd';
+import { TwitterOutlined, FacebookOutlined, GoogleOutlined, InstagramOutlined  } from '@ant-design/icons';
+import { Tag } from 'antd';
 
 const { Link } = Anchor;
 
@@ -20,6 +24,31 @@ function AppHeader() {
   };
 
   return (
+// top header >
+    <div className="site-page-header-ghost-wrapper">
+            
+    <PageHeader
+ghost={false}
+subTitle="Opening Hours : Saturday to Tuesday - 8am to 10pm"
+extra={[<Menu>
+<Tag icon={<TwitterOutlined />} color="#55acee">
+                  Twitter
+        </Tag>
+        <Tag icon={<FacebookOutlined />} color="#3b5999">
+                  Facebook
+        </Tag>
+        <Tag icon={<GoogleOutlined />} color="magenta">
+                  Google
+        </Tag>
+        <Tag icon={<InstagramOutlined />} color="magenta">
+                  Insta
+        </Tag>
+        </Menu>,
+]}
+>
+</PageHeader>
+{/* <--top header end */}
+
     <div className="container-fluid">
       <div className="header">
         <div className="logo">
@@ -34,8 +63,9 @@ function AppHeader() {
             <Link href="#hero" title="Home"  />
             <Link href="#about" title="About" />
             <Link href="#feature" title="Features" />
-            <Link href="#pricing" title="Pricing" />
-            <Link href="#contact" title="Contact" />
+            <Link href="#pricing" title="Reviews" />
+            <Link href="#faq" title="FAQ" />
+            <Link href="#contact" title="Appointment" />
           </Anchor>
         </div>
         <div className="mobileVisible">
@@ -52,12 +82,14 @@ function AppHeader() {
               <Link href="#hero"  title="Home" />
               <Link href="#about" title="About" />
               <Link href="#feature" title="Features" />
-              <Link href="#pricing" title="Pricing" />
-              <Link href="#contact" title="Contact" />
+              <Link href="#pricing" title="Reviews" />
+              <Link href="#faq" title="FAQ" />
+              <Link href="#contact" title="Appointment" />
             </Anchor>
           </Drawer>
         </div>
       </div>
+    </div>
     </div>
   );
 }

@@ -5,7 +5,7 @@ general
 body {
   font-size: 16px;
   line-height: 1.6;
-  color: rgb(241, 181, 181);
+  color: rgb(66, 5, 5);
   overflow-x: hidden;
 }
 
@@ -14,17 +14,19 @@ body {
   max-width: 1500px;
   padding: 0 35px;
 }
-
+/* about.css */
 .ant-layout {
-  background: rgb(248, 234, 154) !important;
+  background: rgb(202, 238, 241) !important;
 }
 
+/* navbar position */
 .mainLayout .ant-layout-header {
   background:transparent;
   padding: 0;
   height: auto;
-  line-height: 1.0;
+  line-height: 1;
 }
+
 
 p {
   font-size: 18px;
@@ -32,7 +34,7 @@ p {
 }
 
 .bgGray {
-  background: #b9f18a;
+  background: #d6eec2;
 }
 
 /* 
@@ -42,18 +44,18 @@ title holder
 .titleHolder {
   text-align: center;
   position: relative;
-  padding: 0 0 20px;
+  padding: 0 0 80px;
   margin: 0 0 40px;
 }
 
 .titleHolder:after {
   transform: translateX(-50%);
   content: '';
-  background: #1890ff;
+  background: #22048b;
   position: absolute;
-  bottom: 0;
+  bottom: 10;
   left: 50%;
-  height: 3px;
+  height: 5px;
   width: 50px;
 }
 
@@ -66,6 +68,7 @@ title holder
 header
 ------ 
 */
+
 .ant-layout-header {
   position: fixed;
   left: 0;
@@ -77,7 +80,7 @@ header
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 10px 0;
   
 }
 
@@ -88,17 +91,17 @@ header
 }
 
 .header .logo .fas {
-  color: #021527;
+  color: #270602;
   margin: 0 5px 0 0;
   font-size: 8px;
 }
 
 .header .logo a {
-  color: rgb(233, 22, 22);
+  color: rgb(228, 24, 24);
 }
 
 .header .ant-anchor-wrapper {
-  background: rgb(255, 246, 204);
+  background: rgba(231, 241, 88, 0.637);
 }
 
 .header .ant-anchor {
@@ -110,9 +113,10 @@ header
 }
 
 .header .ant-anchor-link {
-  padding: 0 70px;
-  line-height: 2.5;
+  padding: 0 50px;
+  line-height: 3.0;
   position: relative;
+
   
 }
 
@@ -122,7 +126,7 @@ header
   background: rgb(25, 1, 78);
   width: 4px;
   position: absolute;
-  top: 5px;
+  top: 2px;
   bottom: 2px;
   left: 30%;
   opacity: 0;
@@ -148,22 +152,22 @@ header
 
 /* ant menu */
 .header .ant-menu {
-  border: 0;
-  background:none !important;
-}
+  border: 2;
+  background:rgb(230, 15, 219) !important;
+} */
 
-.header .ant-menu li.ant-menu-item {
+ .header .ant-menu li.ant-menu-item {
   position: relative;
-  color: rgb(0, 0, 0);
+  color: rgb(218, 25, 25);
 }
 
 .header .ant-menu li.ant-menu-item:before,
 .header .ant-menu li.ant-menu-item:after {
   content: '';
-  background: #e4e6e9;
+  background: #f11212;
   width: 1px;
   position: absolute;
-  top: 2px;
+  top: 200px;
   bottom: 2px;
   left: 30%;
   opacity: 0;
@@ -172,30 +176,30 @@ header
 
 .header .ant-menu li.ant-menu-item:after {
   left: auto;
-  right: 30%;
+  right: 300%;
 }
 
 .header .ant-menu li.ant-menu-item,
 .header .ant-menu li.ant-menu-item-selected {
-  border: 0 !important;
+  border: 1 !important;
 }
 
 .header .ant-menu li.ant-menu-item-selected,
 .header .ant-menu li.ant-menu-item:hover {
-  color: #1890ff;
+  color: #ff3318;
   background:none;
 }
 
-.header .ant-menu li.ant-menu-item-selected:before,
+/* .header .ant-menu li.ant-menu-item-selected:before,
 .header .ant-menu li.ant-menu-item:hover:before {
   left: 5%;
-  opacity: 1;
-}
+  opacity: 5;
+} */
 
 .header .ant-menu li.ant-menu-item-selected:after,
 .header .ant-menu li.ant-menu-item:hover:after {
-  right: 5%;
-  opacity: 1;
+  right: 50%;
+  opacity: 5;
 }
 
 /* 
@@ -228,6 +232,7 @@ hero
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: center;
   padding: 0 0 70px;
 }
 
@@ -255,9 +260,10 @@ hero
 block
 ----- 
 */
+/* colour border  devider */
 .block {
   padding: 100px 0;
-  border-bottom: 10px solid hsla(0, 80%, 50%, 0.965);
+  border-bottom: 5px solid hsla(46, 79%, 63%, 0.65);
 }
 
 /* 
@@ -269,11 +275,6 @@ about
   margin: 0 0 90px;
 }
 
-.aboutBlock .icon {
-  font-size: 40px;
-  color: #320dac;
-  margin: 0 0 10px;
-}
 
 .aboutBlock .content {
   text-align: center;
@@ -287,27 +288,35 @@ faqs
 .faqBlock .ant-collapse {
   margin: 0 0 40px;
 }
+.faqBlock{
+  background-color: rgb(87, 245, 245);
+}
+ .faqBlock.titleHolder{
+  background-color: rgb(240, 36, 36);
+} 
 
 .faqBlock .quickSupport {
   text-align: center;
-  max-width: 740px;
+  max-width: 0px;
   margin: auto;
-}
+} 
 
 .faqBlock .fas {
-  margin: 0 10px 0 0;
+  margin: 0 100px 0 0;
 }
 
 /* 
-pricing block
+price block
 -------------
 */
+
+
 .pricingBlock .ant-list {
   text-align: center;
 }
 
 .pricingBlock .ant-row > div:nth-child(2) .ant-list-item {
-  box-shadow: 0 0 12px 2px #f3f3f3;
+  box-shadow: 0 0 12px 2px #c7e2e7;
   transform: scale(1.1);
   position: relative;
   z-index: 100;
@@ -339,23 +348,26 @@ contact
 }
 
 .contactBlock .ant-form textarea {
-  min-height: 120px;
-  height: 120px;
-}
+  min-height: 20px;
+  height: 20px;
 
+}
+.contactBlock{
+  background-color: #d9f6f8;
+}
 /* 
 footer
 ------
 */
 .ant-layout-footer {
-  background: rgb(247, 150, 150) !important;
-  color: #fff !important;
-  padding: 60px 0 !important;
+  background: rgba(124, 145, 235, 0.829) !important;
+  color: rgb(36, 3, 3) !important;
+  padding: 5px 0 !important;
   text-align: center;
 }
 
 .footer .logo {
-  font-size: 22px;
+  font-size: 12px;
   text-transform: uppercase;
   margin: 0 0 20px;
 }
@@ -404,12 +416,14 @@ footer
 }
 
 body {
-  background-color: #c00b65;
+  background-color: #d3ee37;
   color: rgb(214, 230, 156);
   padding: 05px;
   font-family: Arial;
   text-align: center;
 }
+
+
 
 
 

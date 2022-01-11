@@ -1,40 +1,68 @@
-import React from 'react';
+import React from "react";
+
 
 import { Row, Col } from 'antd';
 
+import logo from '../../assets/images/stethoscope.png';
+import logo1 from '../../assets/images/logo1.png';
+import logo2 from '../../assets/images/logo2.png';
+import logo3 from '../../assets/images/logo3.png';
+import logo4 from '../../assets/images/logo4.jpg';
+import logo5 from '../../assets/images/logo5.png';
+
+
 const items = [
-  {
-    key: '1',
-    icon: <i className="fas fa-chart-pie"></i>,
-    title: 'High Performance',
-    content: 'cu nostro dissentias consectetuer mel. Ut admodum conceptam mei, cu eam tation fabulas abhorreant. His ex mandamus.',
-  },
-  {
-    key: '2',
-    icon: <i className="fas fa-desktop"></i>,
-    title: 'Flat Design',
-    content: 'cu nostro dissentias consectetuer mel. Ut admodum conceptam mei, cu eam tation fabulas abhorreant. His ex mandamus.',
-  },
-  {
-    key: '3',
-    icon: <i className="fas fa-database"></i>,
-    title: 'Simplified Workflow',
-    content: 'cu nostro dissentias consectetuer mel. Ut admodum conceptam mei, cu eam tation fabulas abhorreant. His ex mandamus.',
-  },
-]
+    {
+      key: '1',
+      icon: <img src={logo} alt="Ortho" width="80" height="90"></img>,
+      title: 'ORTHOPEDICS',
+      content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ducimus veniam illo quibusdam pariatur ex sunt, est aspernatur at debitis eius vitae vel nostrum dolorem labore autem corrupti odit mollitia?',
+    },
+    {
+      key: '2',
+      icon: <img src={logo1} alt="Ortho" width="80" height="90"></img>,
+      title: 'DIAGINOSTIC',
+      content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ducimus veniam illo quibusdam pariatur ex sunt, est aspernatur at debitis eius vitae vel nostrum dolorem labore autem corrupti odit mollitia?',
+    },
+    {
+      key: '3',
+      icon: <img src={logo2} alt="Ortho" width="80" height="90"></img>,
+      title: 'PSYCOLOGY',
+      content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ducimus veniam illo quibusdam pariatur ex sunt, est aspernatur at debitis eius vitae vel nostrum dolorem labore autem corrupti odit mollitia?',
+    },
+    {
+        key: '4',
+        icon: <img src={logo3} alt="Ortho" width="80" height="90"></img>,
+        title: 'GENERAL TREATMENT',
+        content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ducimus veniam illo quibusdam pariatur ex sunt, est aspernatur at debitis eius vitae vel nostrum dolorem labore autem corrupti odit mollitia?',
+    },
+    {
+        key: '5',
+        icon: <img src={logo4} alt="Ortho" width="80" height="90"></img>,
+        title: 'SONOGRAM',
+        content: 'The implant fixture is first placed, so that it ilikely to osseointegrate, then a dental prosthetic is added. then a dental prosthetic is added.then a dental pros- thetic is added.',
+    },
+    {
+        key: '6',
+        icon: <img src={logo5} alt="Ortho" width="80" height="90"></img>,
+        title: 'X-RAY',
+        content: 'The implant fixture is first placed, so that it ilikely to osseointegrate, then a dental prosthetic is added. then a dental prosthetic is added.then a dental pros- thetic is added.',
+    },
+
+  ]
 
 function AppAbout() {
-  return (
-    <div id="about" className="block aboutBlock">
-      <div className="container-fluid">
-        <div className="titleHolder">
-          <h1>About Us</h1>
-          <p>dolor sit amet, consectetur adipisicing elit</p>
-        </div>
-        <div className="contentHolder">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit necessitatibus officiis repudiandae est deserunt delectus dolorem iure porro distinctio fuga, nostrum doloremque. Facilis porro in laborum dolor amet ratione hic? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam aut a porro, adipisci quidem sint enim pariatur ducimus, saepe voluptatibus inventore commodi! Quis, explicabo molestias libero tenetur temporibus perspiciatis deserunt.</p>
-        </div>
-        <Row gutter={[16, 16]}>   
+    return(
+       <div id="about" className="block aboutblock">
+           <div className="container-fluid">
+               <div className="titleHolder">
+                   <h2>Best Features of Our Hospital</h2>
+                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam magni in at debitis
+                      nam error officia vero tempora alias? Sunt?</p>
+
+               </div>
+               
+               <Row gutter={[24, 24]}>   
           {items.map(item => {
             return (
               <Col md={{ span: 8 }} key={item.key}>
@@ -49,9 +77,11 @@ function AppAbout() {
             );
           })}
         </Row>
-      </div>
-    </div>
-  );
+
+           </div>
+
+       </div>
+    );
 }
 
 export default AppAbout;
